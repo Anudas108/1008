@@ -1,0 +1,27 @@
+body {
+  background: black;
+}
+
+p {
+  color: white;
+}
+
+.rectangle {
+  height: 100px;
+  background: rgb(212, 212, 212);
+  border-radius: 10px;
+  position: fixed;
+  left: 50%;
+  bottom: 100px;
+  right: 50px;
+}
+
+.rectangle__circle {
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 100px;
+  bottom: 50px;
+}
