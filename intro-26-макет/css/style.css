@@ -144,6 +144,7 @@ body {
   width: 100%;
   background: #D0DCE7;
   border-radius: 100px;
+  transition-duration: .5s;
 }
 
 .button:hover {
