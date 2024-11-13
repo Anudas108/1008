@@ -60,9 +60,11 @@ while (d > 1) {
 const homework6 = 'домашка к 81 уроку первое задание:';
 console.log(homework6);
 
-const numbers5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-for (let y = 0; y < numbers5.length; y = y + 2) {
-  console.log(numbers5[y] + 1)
+const go = [1, 55, 32, 77, 99, 28];
+for (let ch of go) {
+  if (ch % 2 == 0) {
+    console.log(ch);
+  }
 }
 
 const homework7 = 'домашка к 81 уроку второе задание:';
@@ -72,3 +74,98 @@ let rainbow = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 for (let x = rainbow.length - 1; x >= 0; x--) {
   console.log(rainbow[x])
 }
+
+const homework9 = 'домашка к 82 уроку первое задание:';
+console.log(homework9);
+
+let name = 'Alex';
+function greeting(name) {
+  return 'Hello ' + name + ' !'
+}
+console.log(greeting(name))
+
+const homework10 = 'домашка к 82 уроку второе задание:';
+console.log(homework10);
+
+const arrayOfNumbers = [1, 15, 9, 38, 54, 3, 75, 7]
+function logMoreThanTen(numbers) {
+  for (let t = 0; t < numbers.length; t++) {
+    if (numbers[t] > 10) {
+      console.log(numbers[t])
+    }
+  }
+}
+logMoreThanTen(arrayOfNumbers)
+
+const homework11 = 'домашка к 82 уроку третье задание:';
+console.log(homework11);
+
+function calculator(figureOne, figureTwo, action) {
+  if (action == 'minus') {
+    return figureOne - figureTwo
+  } else if (action == 'plus') {
+    return figureOne + figureTwo
+  } else if (action == 'multiply') {
+    return figureOne * figureTwo
+  } else if (action == 'share') {
+    return figureOne / figureTwo
+  }
+}
+
+const result3 = calculator(10, 2, 'share')
+console.log(result3)
+
+const homework12 = 'домашка к 83 уроку первое задание:';
+console.log(homework12);
+
+const Alexei = {
+  myAge: 31,
+  myPlaceOfBirth: 'Moscow',
+  mySex: 'male',
+  myHeight: 182
+}
+console.log(Alexei)
+
+const homework13 = 'домашка к 83 уроку второе задание:';
+console.log(homework13);
+
+const dog = {
+  age: 10,
+  callDog(name) {
+    console.log(`Aport ${name}`)
+  }
+}
+dog.callDog('Bobik!')
+
+const homework14 = 'домашка к 83 уроку третье задание:';
+console.log(homework14);
+
+const users3 = [
+  {
+    name: 'Anton',
+    age: 25,
+    isAdmin: false,
+  },
+  {
+    name: 'Kolya',
+    age: 30,
+    isAdmin: false,
+  },
+  {
+    name: 'Polina',
+    age: 22,
+    isAdmin: true,
+  },
+  {
+    name: 'Lera',
+    age: 34,
+    isAdmin: false,
+  }
+]
+let numberOfUsers = 0
+for (let f = 0; f < users3.length; f++) {
+  if (users3[f].isAdmin != true) {
+    numberOfUsers = numberOfUsers + 1;
+  }
+}
+console.log(numberOfUsers)
