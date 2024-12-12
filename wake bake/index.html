@@ -4,8 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/fonts.css">
-  <link rel="stylesheet" href="style/reset.css">
   <link rel="stylesheet" href="style/style.css">
   <title>Wake & Bake</title>
 </head>
@@ -155,11 +153,10 @@
       </section>
       <section class="main__program program">
         <div class="container">
+          <h2 class="program__title title">
+            Программа обучения
+          </h2>
           <div class="program__top">
-            <div class="program__heading">
-              <h2 class="program__title title">
-                Программа обучения
-              </h2>
               <p class="program__text">
                 Продолжительность курса — 4 недели
                 <br>
@@ -167,7 +164,6 @@
                 <br>
                 На каждое занятие отводится по 6 часов
               </p>
-            </div>
             <ul class="tab-controls">
               <li class="tab-controls__items">
                 <a href="#tab1" class="tab-controls__link tab-controls__link--active">
@@ -191,7 +187,7 @@
               </li>
             </ul>
           </div>
-          <div class="tab-content tab-content--show" id="tab1">
+          <div class="program__tab-content tab-content tab-content--show" id="tab1">
             <ul class="accordion-list">
               <li class="accordion-list__item">
                 <button class="accordion-list__control" type="button">
@@ -319,7 +315,7 @@
               </li>
             </ul>
           </div>
-          <div class="tab-content" id="tab2">
+          <div class="program__tab-content tab-content" id="tab2">
             <ul class="accordion-list">
               <li class="accordion-list__item">
                 <button class="accordion-list__control" type="button">
@@ -447,7 +443,7 @@
               </li>
             </ul>
           </div>
-          <div class="tab-content" id="tab3">
+          <div class="program__tab-content tab-content" id="tab3">
             <ul class="accordion-list">
               <li class="accordion-list__item">
                 <button class="accordion-list__control" type="button">
@@ -557,7 +553,7 @@
               </li>
             </ul>
           </div>
-          <div class="tab-content" id="tab4">
+          <div class="program__tab-content tab-content" id="tab4">
             <ul class="accordion-list">
               <li class="accordion-list__item">
                 <button class="accordion-list__control" type="button">
@@ -666,6 +662,41 @@
                 </div>
               </li>
             </ul>
+          </div>
+          <div class="program__bottom">
+            <div class="program__action">
+              <div class="program__discount">
+                Успей получить скидку
+                <div class="program__discount-value">
+                  -30%
+                </div>
+                <span>
+                  до 1 июня
+                </span>
+              </div>
+              <div class="program__price">
+                <div class="program__price-text">
+                  Стоимость курса без скидки
+                </div>
+                <div class="program__price-value">
+                  32 000 руб.
+                </div>
+              </div>
+              <div class="program__price">
+                <div class="program__price-text">
+                  Стоимость курса со скидкой
+                </div>
+                <div class="program__price-value program__price-value--big">
+                  22 400 руб.
+                </div>
+              </div>
+              <a href="#" class="program__button button">
+                Оставить заявку
+              </a>
+            </div>
+            <div class="program__img">
+              <img src="img/decor/cake.png" alt="">
+            </div>
           </div>
         </div>
       </section>
