@@ -4,8 +4,15 @@
   --general-bg: #FFF9F4;
   --accent-bg: #FFE0CB;
   --accent-color: #FFA55C;
+  --accent-color-2: #CEAAD0;
+  --input-color: #AC907A;
   --transition: all .4s;
   --border-radius: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5vh;
 }
 
 .body {
@@ -40,7 +47,8 @@
 }
 
 .main__program,
-.main__gallery {
+.main__gallery,
+.main__testimonials {
   padding-bottom: 145px;
 }
 
@@ -120,7 +128,7 @@
 
 .modal__cansel:hover path,
 .modal__cansel:hover rect {
-  stroke: #AC907A;
+  stroke: var(--input-color);
 }
 
 .modal__img {
@@ -153,7 +161,7 @@
   position: absolute;
   top: 12px;
   left: 28px;
-  color: #AC907A;
+  color: var(--input-color);
   font-size: 11px;
 
   opacity: 0;
@@ -166,7 +174,7 @@
   display: block;
   width: 100%;
   background: #00000000;
-  border: 1px solid #ac907a;
+  border: 1px solid var(--input-color);
   border-radius: 100px;
   padding: 19px 41px 19px 28px;
   font-size: 16px;
@@ -178,7 +186,7 @@
 }
 
 .field__input::placeholder {
-  color: #AC907A;
+  color: var(--input-color);
   transition: var(--transition);
 }
 
