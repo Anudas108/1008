@@ -18,17 +18,17 @@ html {
   min-height: 100%;
   width: 100%;
   overflow: hidden;
-  display: flex;
+  /* display: flex; */
   background: var(--bg-prime);
   font-family: "Gilroy", "Arial", sans-serif;
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1190px;
+  display: flex;
   height: 100%;
   margin: 0 auto;
   padding: 0 15px;
-  height: 100%;
 }
 
 /* .title {
@@ -60,44 +60,60 @@ html {
 
 /* ---------------header-top */
 
-.header__top {
+.header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
-
-.header__top-inner {
+.header__top {
   display: flex;
   flex-direction: row;
   position: relative;
 }
 
+
+.header__top-inner {
+  margin-top: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 134px;
+}
+
 .header__top-logo {
-  position: absolute;
-  width: 60px;
-  height: 39px;
+  /* position: absolute; */
+  max-width: 60px;
+  max-height: 39px;
   top: 47px;
   left: 140px;
 
+  margin-left: 0px;
+  margin-right: 53px;
 }
 
-.nav {}
+.header__top-logo img {
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  text-align: center;
+}
 
 .nav__list {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  position: absolute;
-  width: 486px;
-  height: 21px;
+  justify-self: start;
+  align-items: center;
+  gap: 40px;
+  /* position: absolute; */
+  max-width: 486px;
+  max-height: 21px;
   top: 56px;
   left: 280px;
   gap: 40px;
-  white-space: nowrap;
-  font-size: 14px;
-  font-weight: 400;
-
+  margin-left: 27px;
 
 }
 
@@ -106,21 +122,65 @@ html {
   color: var(--white-text);
 }
 
+.nav__item a {
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 400;
+}
+
 .nav__link {}
 
 .button {
+  /* position: absolute; */
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  position: absolute;
-  width: 122px;
-  height: 54px;
-  top: 40px;
-  left: 1178px;
+  align-items: center;
+  justify-content: end;
+  max-width: 122px;
+  max-height: 54px;
+  /* top: 40px; */
+  /* left: 1178px; */
   padding: 15px 35px;
   border-radius: 65px;
   font-size: 16px;
   font-weight: 700;
   background: var(--white-text);
+}
+
+
+
+/* -------------------- */
+
+.header__top-content {
+
+}
+
+.container {
+
+}
+
+.header__top-title {
+
+
+  color: rgb(241, 241, 241);
+  font-family: "Gilroy";
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 100%;
+  text-align: left;
+}
+
+.header__top-text {}
+
+.header__top-button-white {}
+
+.header__top-button-black {}
+
+.header__top-img {
+  /* position: absolute; */
+  width: 1135.14px;
+  height: 825.33px;
+  left: 691.5px;
+  right: 119.36px;
+  top: -33.5px;
+  bottom: 537.17px;
 }
