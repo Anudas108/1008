@@ -10,7 +10,7 @@
   <title>Дипломка</title>
 </head>
 
-<body>
+<body class="body dark-theme light-theme">
   <div class="wrapper">
 
     <header class="header">
@@ -18,7 +18,9 @@
         <div class="container">
           <div class="header__top-inner">
             <nav class="nav">
-              <img class="header__top-logo" src="img/logo/logo-white.svg" alt="Логотип компании mi">
+              <a href="/" class="header__top-logo">
+                <img src="img/logo/logo-white.svg" alt="Логотип компании mi">
+              </a>
               <ul class="nav__list">
                 <li class="nav__item">
                   <a href="#" class="nav__link">О продукте</a>
@@ -37,33 +39,40 @@
                 </li>
               </ul>
             </nav>
-            <button class="button">Купить</button>
+            <button class="button" type="button">Купить</button>
           </div>
         </div>
       </div>
-      <section class="header__top-content">
-        <div class="header__top-content">
-          <div class="container1">
-            <h1 class="header__top-title">
-              Стильный электросамокат с мощным аккумулятором
+      <section class="header__section">
+        <div class="container">
+          <div class="header__section-inner">
+            <h1 class="header__section-title">
+              Стильный электросамокат
+              <br>
+              с мощным аккумулятором
             </h1>
-            <p class="header__top-text">
-              Улучшенная производительность  для дальних путешествий.  Работает так же просто,  как и выглядит.
+            <p class="header__section-text">
+              Улучшенная производительность <br> для дальних путешествий. <br> Работает так же просто, <br> как и выглядит.
             </p>
-            <button class="header__top-button-white">
-              Белый
-            </button>
-            <button class="header__top-button-black">
-              Черный
-            </button>
-            <img src="img/scooter/scooter-white.png" alt="" class="header__top-img">
+            <div class="header__section-button">
+              <button class="header__section-button-white">
+                Белый
+              </button>
+              <button class="header__section-button-black">
+                Черный
+              </button>
+            </div>
           </div>
+        </div>
+        <div class="bike-white">
+          <img src="img/scooter/Bike-white.png" alt="" class="bike-white">
         </div>
       </section>
     </header>
     <main class="main"></main>
     <footer class="footer"></footer>
   </div>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
