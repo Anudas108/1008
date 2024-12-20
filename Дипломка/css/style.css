@@ -71,19 +71,6 @@ html {
 
 /* ---------------header-top */
 
-.bike-white {
-  position: relative;
-  overflow: hidden;
-  max-width: 1946px;
-  height: auto;
-  left: 300px;
-  top: -505px;
-  z-index: -1;
-}
-
-.bike-white img {
-  width: 100%;
-}
 
 .header {}
 
@@ -166,7 +153,9 @@ html {
   padding-bottom: 250px;
 }
 
-.header__section-inner {}
+.header__section-inner {
+  position: relative;
+}
 
 .header__section-title {
   max-width: 1160px;
@@ -216,4 +205,18 @@ html {
   font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
+}
+
+.bike-white {
+  position: absolute;
+  overflow: hidden;
+  max-width: 1946px;
+  height: auto;
+  left: 300px;
+  top: -505px;
+  z-index: -1;
+}
+
+.bike-white img {
+  width: 100%;
 }
