@@ -285,7 +285,7 @@ html {
 }
 
 
-.bike {
+.header__img img {
   position: absolute;
   max-width: 1900px;
   width: 140%;
@@ -410,17 +410,17 @@ html {
   margin-bottom: 120px;
 }
 
-.about__speed {
+.bg__speed {
   margin: 0;
   padding: 0;
 }
 
-.about__speed-logo {
+.bg__speed-logo {
   padding-top: 120px;
   margin-bottom: 149px;
 }
 
-.about__speed-title {
+.bg__speed-title {
   color: var(--white);
   font-family: "Gilroy";
   font-size: 45px;
@@ -430,7 +430,7 @@ html {
   margin-bottom: 30px;
 }
 
-.about__speed-text {
+.bg__speed-text {
   color: var(--white);
   font-family: "Gilroy";
   font-size: 14px;
@@ -593,7 +593,14 @@ html {
   z-index: -1;
 }
 
-.security__ellipse3 {}
+.security__ellipse3 {
+  position: absolute;
+  width: 579px;
+  height: 582px;
+  left: -380px;
+  top: 880px;
+  z-index: -1;
+}
 
 .security__line1 {
   position: absolute;
@@ -714,9 +721,429 @@ html {
   z-index: 0;
 }
 
-/* ---------------------------------footer */
+/* ----------------------------------bgXiaomi */
 
-.footer {}
+.bgXiaomi {
+  position: relative;
+  background: url(../img/bg/bgXiaomi.png) no-repeat 100% / cover;
+  width: auto;
+  height: 600px;
+  z-index: -1;
+  margin-bottom: 120px;
+}
+
+.bgXiaomi__about {
+  margin: 0;
+  padding: 0;
+}
+
+.bgXiaomi__about-logo {
+  padding-top: 120px;
+  margin-bottom: 147px;
+}
+
+.bgXiaomi__about-title {
+  color: var(--orange-text);
+  font-family: "Gilroy";
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 1.1;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.bgXiaomi__about-text {
+  color: var(--black-text);
+  font-family: "Gilroy";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  max-width: 470px;
+  padding-bottom: 15px;
+}
+
+.bgXiaomi-bg {
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+}
+
+/* ------------------------section-feedback */
+
+.feedback {
+  position: relative;
+}
+
+.feedback__ellipse1 {
+  position: absolute;
+  max-width: 1148.61px;
+  height: auto;
+  left: 245px;
+  top: -482px;
+  z-index: -2;
+}
+
+.feedback__line1 {
+  position: absolute;
+  max-width: 1256px;
+  height: auto;
+  left: 1060px;
+  top: -280.91px;
+  transform: rotate(-0.61deg);
+  z-index: -2;
+}
+
+.feedback__title {
+  color: var(--orange-text);
+  font-family: "Gilroy";
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 1.1;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.feedback__slider {}
+
+.swiper {}
+
+.feedback__wrapper {}
+
+.swiper-wrapper {}
+
+.feedback__slide {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.swiper-slide {}
+
+.feedback__slide-content {
+  max-width: 380px;
+  padding: 40px;
+  border-radius: 15px;
+  background: var(--black-text);
+}
+
+.feedback__slide-title {
+  color: var(--white);
+  font-family: "Gilroy";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.feedback__slide-line {
+  max-width: 100px;
+  height: 3px;
+  background: var(--orange-text);
+  margin-bottom: 15px;
+
+}
+
+.feedback__slide-text {
+  color: var(--white);
+  font-family: "Gilroy";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.feedback__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 120px;
+  padding-right: 52px;
+}
+
+.feedback__button {
+  padding: 15px 35px;
+  border-radius: 65px;
+  background: var(--white);
+  color: var(--black-text);
+  font-family: "Gilroy";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.feedback__button-swiper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.feedback__pref {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--white);
+  cursor: pointer;
+}
+
+.feedback__next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--orange-text);
+  cursor: pointer;
+}
+
+/* ---------------------------------section-faq */
+
+.faq {
+  position: relative;
+}
+
+.faq__ellipse1 {
+  position: absolute;
+  max-width: 579px;
+  height: auto;
+  left: -397px;
+  top: -354px;
+  z-index: -1;
+}
+
+.faq__inner {
+  display: flex;
+  align-items: start;
+  justify-content: left;
+  gap: 85px;
+  margin-bottom: 120px;
+}
+
+.faq__form {
+  max-width: 415px;
+}
+
+.faq__form-title {
+  color: var(--orange-text);
+  font-family: "Gilroy";
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 1.1;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.faq__form-text {
+  max-width: 360px;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.faq__form-text p {
+  margin-bottom: 15px;
+}
+
+.faq__form-text p:last-child {
+  margin-bottom: 60px;
+}
+
+.faq__form-button {
+  border-radius: 65px;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 35px;
+  color: var(--black-text);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.faq__example {
+  max-width: 660px;
+}
+
+.faq__example-elements {
+  margin-bottom: 40px;
+}
+
+.faq__example-elements:last-child {
+  margin-bottom: 0;
+}
+
+.faq__example-title {
+  color: rgb(241, 241, 241);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.faq__example-line {
+  max-width: 100px;
+  height: 3px;
+  background: var(--orange-text);
+  margin-bottom: 15px;
+}
+
+.faq__example-text {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* ----------------------------------section-price */
+
+.price {
+  position: relative;
+}
+
+.price__line1 {
+  position: absolute;
+  max-width: 1148px;
+  height: auto;
+  left: -105px;
+  top: -165px;
+  z-index: 0;
+}
+
+.price__bg {
+  position: relative;
+  border-radius: 15px;
+  background-image: linear-gradient(45deg, #000000 0%, #0f0f0f 15%, #151515 30%, #1f1f1f 40%, #282828 50%, #303030 60%, #3a3a3a 75%, #434343 90%, #4c4c4c 100%);
+}
+
+.price__inner {
+  padding: 60px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 346px;
+}
+
+.price__buy {}
+
+.price__title {
+  color: var(--white);
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: left;
+  min-width: 494px;
+  margin-bottom: 15px;
+}
+
+.price__price {
+  color: var(--orange-text);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.price__section-button {}
+
+.price__section-button {
+  border-radius: 65px;
+  border: 3px solid var(--white);
+  border-color: var(--white);
+  max-width: 250px;
+  max-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 197px;
+}
+
+.price__section-button-white {
+  padding: 15px 35px;
+  border-radius: 65px;
+  border-color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.price__section-button-black {
+  padding: 15px 35px;
+  background: transparent;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.price__button {
+  border-radius: 65px;
+  background: var(--orange-text);
+  padding: 15px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.price__set {
+  max-width: 200px;
+  padding-right: 25px;
+}
+
+.price__set-title {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: left;
+  margin-bottom: 25px;
+  white-space: nowrap;
+}
+
+.price__set-list {
+  max-width: 200px;
+}
+
+.price__set-item {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  padding-bottom: 10px;
+  white-space: nowrap;
+}
+
+.price__img img {
+  max-width: 950px;
+  height: auto;
+  position: absolute;
+  top: -100px;
+  left: 360px;
+}
+
+
+
+
+/* ---------------------------------footer */
 
 .footer__inner {
   display: flex;
