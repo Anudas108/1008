@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/stylesheet.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
   <title>Дипломка</title>
 </head>
 
@@ -36,31 +37,43 @@
       <div class="header__top">
         <div class="container">
           <div class="header__top-inner">
+            <a href="/" class="header__top-logo">
+              <svg width="60" height="39" viewBox="0 0 60 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M59.3689 0C59.7139 0 60 0.281934 60 0.629353V38.3743C60 38.7162 59.7139 39 59.3689 39H51.2391C50.8904 39 50.6079 38.7162 50.6079 38.3743V0.629353C50.6079 0.281934 50.8904 0 51.2391 0H59.3689ZM24.0926 0C30.2253 0 36.6369 0.285574 39.798 3.50511C42.909 6.6736 43.2446 12.9812 43.2573 19.1066L43.2576 38.3743C43.2576 38.7162 42.9752 39 42.6265 39H34.5003C34.1516 39 33.8673 38.7162 33.8673 38.3743V18.7751C33.8584 15.3537 33.6653 11.8377 31.931 10.0679C30.4381 8.5454 27.6524 8.19617 24.7559 8.12341H10.0232C9.67639 8.12341 9.39388 8.40716 9.39388 8.74912V38.3743C9.39388 38.7162 9.10782 39 8.76095 39H0.627567C0.280704 39 0 38.7162 0 38.3743V0.629353C0 0.281934 0.280704 0 0.627567 0H24.0926ZM25.9128 15.0318C26.2578 15.0318 26.5385 15.3137 26.5385 15.6575V38.3743C26.5385 38.7162 26.2578 39 25.9128 39H17.3735C17.0231 39 16.7406 38.7162 16.7406 38.3743V15.6575C16.7406 15.3137 17.0231 15.0318 17.3735 15.0318H25.9128Z"
+                  fill="#F1F1F1" />
+              </svg>
+            </a>
             <nav class="nav">
-              <a href="/" class="header__top-logo">
-                <img src="img/logo/logo-white.svg" alt="Логотип компании mi">
-              </a>
               <ul class="nav__list">
                 <li class="nav__item">
-                  <a href="#" class="nav__link">О продукте</a>
+                  <a href="#about" class="nav__link">О продукте</a>
                 </li>
                 <li class="nav__item">
-                  <a href="#" class="nav__link">Внешний вид</a>
+                  <a href="#appearance" class="nav__link">Внешний вид</a>
                 </li>
                 <li class="nav__item">
-                  <a href="#" class="nav__link">Безопасность</a>
+                  <a href="#security" class="nav__link">Безопасность</a>
                 </li>
                 <li class="nav__item">
-                  <a href="#" class="nav__link">Отзывы</a>
+                  <a href="#feedback" class="nav__link">Отзывы</a>
                 </li>
                 <li class="nav__item">
-                  <a href="#" class="nav__link">FAQ</a>
+                  <a href="#faq" class="nav__link">FAQ</a>
                 </li>
               </ul>
+              <a class="header__top-button" href="#" type="button">Купить</a>
             </nav>
-            <button class="button" type="button">Купить</button>
+            <div class="header__top-burger">
+              <div class="header__top-burger-line"></div>
+              <div class="header__top-burger-line"></div>
+              <div class="header__top-burger-line"></div>
+            </div>
           </div>
         </div>
+      </div>
+      <div class="header__img">
+        <img id="headerScooter" src="img/scooter/scooter-white.png" alt="">
       </div>
       <section class="header__section">
         <div class="container">
@@ -82,25 +95,19 @@
                 Черный
               </button>
             </div>
-            <div class="bike-white">
-              <img src="" alt="">
-            </div>
           </div>
         </div>
       </section>
-      <div class="header__img">
-        <img src="img/scooter/scooter-white.png" alt="">
-      </div>
     </header>
     <main class="main">
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <div class="about__inner">
             <h2 class="about__title">
               Мощная батарея и экономичный расход <br> заряда позволяют преодолевать <br> расстояния до 45 км
             </h2>
-            <div class="about__hover">
-              <div class="about__hover-one">
+            <ul class="about__hover">
+              <li class="about__hover-one list">
                 <p class="about__hover-title">
                   Три режима скорости
                 </p>
@@ -110,8 +117,8 @@
                   скорость, если опаздываете на работу.  Во время прогулки по парку активируйте режим «D».  Включите
                   режим «Пешеход», когда двигаетесь  по оживлённой улице.
                 </p>
-              </div>
-              <div class="about__hover-two">
+              </li>
+              <li class="about__hover-two list">
                 <p class="about__hover-title">
                   Система восстановления энергии
                 </p>
@@ -120,35 +127,43 @@
                   Во время торможения и движения по инерции система преобразовывает кинетическую энергию  в
                   электрическую, позволяя увеличить общий  запас хода самоката.
                 </p>
-              </div>
-              <div class="about__hover-three">
+              </li>
+              <li class="about__hover-three list">
                 <p class="about__hover-title">
                   Мощная батарея
                 </p>
                 <hr class="about__hover-hr">
                 <p class="about__hover-text">
-                  Самокат оснащен аккумулятором емкостью  12 800 мАч. Это позволяет преодолевать расстояния  до 45 км
+                  Самокат оснащен аккумулятором емкостью 12 800 мАч. Это позволяет преодолевать расстояния  до 45 км
                   без подзарядки.
                 </p>
-              </div>
-            </div>
-            <div class="about__picture">
-              <div class="about__picture-one">
+              </li>
+              <li class="about__picture-one">
                 <img src="img/scooter/scooters-mans.png" alt="">
-              </div>
-              <div class="about__picture-two">
+              </li>
+              <li class="about__picture-two">
                 <img src="img/scooter/scooters-mans2.png" alt="">
-              </div>
-            </div>
+              </li>
+              <li class="about__picture-three">
+                <img src="img/scooter/about__picture-three.png" alt="">
+              </li>
+              <li class="about__picture-four">
+                <img src="img/scooter/about__picture-four.png" alt="">
+              </li>
+            </ul>
           </div>
         </div>
       </section>
       <section class="bg">
         <div class="container">
           <div class="bg__speed">
-            <div class="bg__speed-logo">
-              <img src="img/logo/logo-white.svg" alt="">
-            </div>
+            <a class="bg__speed-logo" href="/">
+              <svg width="60" height="39" viewBox="0 0 60 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M59.3689 0C59.7139 0 60 0.281934 60 0.629353V38.3743C60 38.7162 59.7139 39 59.3689 39H51.2391C50.8904 39 50.6079 38.7162 50.6079 38.3743V0.629353C50.6079 0.281934 50.8904 0 51.2391 0H59.3689ZM24.0926 0C30.2253 0 36.6369 0.285574 39.798 3.50511C42.909 6.6736 43.2446 12.9812 43.2573 19.1066L43.2576 38.3743C43.2576 38.7162 42.9752 39 42.6265 39H34.5003C34.1516 39 33.8673 38.7162 33.8673 38.3743V18.7751C33.8584 15.3537 33.6653 11.8377 31.931 10.0679C30.4381 8.5454 27.6524 8.19617 24.7559 8.12341H10.0232C9.67639 8.12341 9.39388 8.40716 9.39388 8.74912V38.3743C9.39388 38.7162 9.10782 39 8.76095 39H0.627567C0.280704 39 0 38.7162 0 38.3743V0.629353C0 0.281934 0.280704 0 0.627567 0H24.0926ZM25.9128 15.0318C26.2578 15.0318 26.5385 15.3137 26.5385 15.6575V38.3743C26.5385 38.7162 26.2578 39 25.9128 39H17.3735C17.0231 39 16.7406 38.7162 16.7406 38.3743V15.6575C16.7406 15.3137 17.0231 15.0318 17.3735 15.0318H25.9128Z"
+                  fill="#F1F1F1" />
+              </svg>
+            </a>
             <h3 class="bg__speed-title">
               Высокая скорость <br> передвижения
             </h3>
@@ -158,7 +173,7 @@
           </div>
         </div>
       </section>
-      <section class="appearance">
+      <section class="appearance" id="appearance">
         <div class="container">
           <div class="appearance__ellips1">
             <img src="img/decor/appearance__ellips2.png" alt="">
@@ -201,7 +216,7 @@
           </div>
         </div>
       </section>
-      <section class="security">
+      <section class="security" id="security">
         <div class="container">
           <div class="security__ellipse1">
             <img src="img/decor/security__ellips1.png" alt="">
@@ -218,36 +233,47 @@
           <h3 class="security__title">
             Заботится о вашей безопасности
           </h3>
-          <div class="security__inner">
-            <div class="security__element">
-              <h4 class="security__inner-title">Яркие ходовые <br> огни</h4>
+          <ul class="security__inner">
+            <li class="security__element el1 list2">
+              <p class="security__inner-title">Яркие ходовые <br> огни</p>
               <div class="security__inner-line"></div>
               <p class="security__inner-text">Продуманный угол рассеивания света позволяет сохранять хорошую видимость,
                 не ослепляя других участников движения.</p>
-            </div>
-            <div class="security__element">
-              <h4 class="security__inner-title">Двойная тормозная <br> система</h4>
+            </li>
+            <li class="security__element el2 list2">
+              <p class="security__inner-title">Двойная тормозная <br> система</p>
               <div class="security__inner-line"></div>
               <p class="security__inner-text">При нажатии наручку тормоза системы переднего и заднего колеса
                 активируются последовательно, сокращая тормозной путь и обеспечивая безопасную и плавную остановку.</p>
-            </div>
-            <div class="security__element">
-              <h4 class="security__inner-title">Яркая задняя <br> фара</h4>
+            </li>
+            <li class="security__element el3 list2">
+              <p class="security__inner-title">Яркая задняя <br> фара</p>
               <div class="security__inner-line"></div>
               <p class="security__inner-text">При включении ходовых огней задняя фара включается автоматически. При
                 нажатии на ручку тормоза она начинает мигать, предупреждая других участников движения.</p>
-            </div>
-            <div class="security__element">
-              <h4 class="security__inner-title">Отражатели спереди, <br> сбоку и сзади</h4>
+            </li>
+            <li class="security__element el4 list2">
+              <p class="security__inner-title">Отражатели спереди, <br> сбоку и сзади</p>
               <div class="security__inner-line"></div>
               <p class="security__inner-text">Улучшенные отражатели, размещенные с четырех сторон, делают вашу поездку
                 в темное время суток безопаснее.</p>
-            </div>
-          </div>
-          <div class="security__img">
-            <img src="img/scooter/security__img1.png" alt="" class="security__img-one">
-            <img src="img/scooter/security__img2.png" alt="" class="security__img-two">
-          </div>
+            </li>
+            <li class="security__img-one">
+              <img src="img/scooter/security__img1.png" alt="">
+            </li>
+            <li class="security__img-two">
+              <img src="img/scooter/security__img2.png" alt="">
+            </li>
+            <li class="security__img-three">
+              <img src="img/scooter/security__img3.png" alt="">
+            </li>
+            <li class="security__img-four">
+              <img src="img/scooter/security__img4.png" alt="">
+            </li>
+            <li class="security__img-five">
+              <img src="img/scooter/security__img5.png" alt="">
+            </li>
+          </ul>
           <div class="security__components">
             <div class="security__inner-two">
               <h3 class="security__title title-security">Мобильное приложение <br> Mi Home</h3>
@@ -256,12 +282,16 @@
                 самоката, а так же просмотра основных данных: пробег, скорость, уровень заряда аккумулятора.
               </p>
               <div class="security__socials">
-                <img src="img/logo/app-store-white.svg" alt="" class="security__socials-app">
-                <img src="img/logo/google-white.svg" alt="" class="security__socials-google">
+                <a href="#" class="security__socials-a">
+                  <img src="img/logo/app-store-white.svg" alt="" class="security__socials-app" id="App">
+                </a>
+                <a href="#" class="security__socials-a">
+                  <img src="img/logo/google-white.svg" alt="" class="security__socials-google" id="Google">
+                </a>
               </div>
             </div>
             <div class="security__telefhone">
-              <img src="img/scooter/security__telefhone1.png" alt="">
+              <img src="img/scooter/security__telefhone1.png" alt="" id="telefhoneColor">
             </div>
           </div>
         </div>
@@ -288,7 +318,7 @@
           <img src="img/bg/image 207.png" alt="">
         </div>
       </section>
-      <section class="feedback">
+      <section class="feedback" id="feedback">
         <div class="container">
           <div class="feedback__ellipse1">
             <img src="img/decor/feedback__ellipse1.png" alt="">
@@ -297,9 +327,9 @@
             <img src="img/decor/feedback__line1.png" alt="">
           </div>
           <div class="feedback__title">Отзывы о Mi Scooter Pro 2</div>
-          <div class="feedback__slider swiper">
-            <div class="feedback__wrapper swiper-wrapper">
-              <div class="feedback__slide swiper-slide" data-fslightbox="gallery">
+          <div class="feedback__slider">
+            <div class="feedback__wrapper">
+              <div class="feedback__slide" data-fslightbox="gallery">
                 <div class="feedback__slide-content">
                   <h4 class="feedback__slide-title">Михаил Сафонов</h4>
                   <div class="feedback__slide-line"></div>
@@ -308,23 +338,33 @@
                     десятидюймовая резина и дальность пробега на одном заряде, скорость зарядки. В плюсах Xiaomi -
                     Удобства переноски (вес аппарата, развесовка).
                   </p>
+                  <p class="feedback__slide-text">
+                    В итоге купил Xiaomi и поставил 10 дюймовые шины - получил комфорт при небольшом весе самоката.
+                  </p>
                 </div>
                 <div class="feedback__slide-content">
                   <h4 class="feedback__slide-title">Имя скрыто</h4>
                   <div class="feedback__slide-line"></div>
-                  <p class="feedback__slide-text">Владею также первой версией самоката (m365).  В версии pro 2
+                  <p class="feedback__slide-text">Владею также первой версией самоката (m365). <br> В версии pro 2
                     исправлено множество недостатков m365:
-                    - усилен узел складывания и язычок - батарея находится в отдельном жёстком алюминиевом корпусе, что
-                    исключает её поломку из-за тряски - установлена поддержка заднего крыла и защита провода заднего
-                    габарита.</p>
+                  </p>
+                  <p class="feedback__slide-text">
+                    - усилен узел складывания и язычок <br> - батарея находится в отдельном жёстком алюминиевом корпусе,
+                    что
+                    исключает её поломку из-за тряски <br> - установлена поддержка заднего крыла и защита провода
+                    заднего габарита.
+                  </p>
                 </div>
                 <div class="feedback__slide-content">
                   <h4 class="feedback__slide-title">Алексей З.</h4>
                   <div class="feedback__slide-line"></div>
                   <p class="feedback__slide-text">Мой вес 57кг, прошитый с максимальной 32км в час в режиме S по Москве
                     у меня осилил - 25км и еще оставалось 16% заряда.
+                  </p>
+                  <p class="feedback__slide-text">
                     ОБЯЗАТЕЛЬНО: следите за давлением в камерах. Прям очень советую купить электронный насос от Xiaomi,
-                    и раз в неделю подкачивайте. С завода самокат приезжает с сильно недокачанными</p>
+                    и раз в неделю подкачивайте. С завода самокат приезжает с сильно недокачанными
+                  </p>
                 </div>
                 <div class="feedback__slide-content">
                   <h4 class="feedback__slide-title">Михаил Сафонов</h4>
@@ -334,30 +374,63 @@
                     десятидюймовая резина и дальность пробега на одном заряде, скорость зарядки. В плюсах Xiaomi -
                     Удобства переноски (вес аппарата, развесовка).
                   </p>
+                  <p class="feedback__slide-text">
+                    В итоге купил Xiaomi и поставил 10 дюймовые шины - получил комфорт при небольшом весе самоката.
+                  </p>
+                </div>
+                <div class="feedback__slide-content">
+                  <h4 class="feedback__slide-title">Имя скрыто</h4>
+                  <div class="feedback__slide-line"></div>
+                  <p class="feedback__slide-text">Владею также первой версией самоката (m365). <br> В версии pro 2
+                    исправлено множество недостатков m365:
+                  </p>
+                  <p class="feedback__slide-text">
+                    - усилен узел складывания и язычок <br> - батарея находится в отдельном жёстком алюминиевом корпусе,
+                    что
+                    исключает её поломку из-за тряски <br> - установлена поддержка заднего крыла и защита провода
+                    заднего габарита.
+                  </p>
+                </div>
+                <div class="feedback__slide-content">
+                  <h4 class="feedback__slide-title">Алексей З.</h4>
+                  <div class="feedback__slide-line"></div>
+                  <p class="feedback__slide-text">Мой вес 57кг, прошитый с максимальной 32км в час в режиме S по Москве
+                    у меня осилил - 25км и еще оставалось 16% заряда.
+                  </p>
+                  <p class="feedback__slide-text">
+                    ОБЯЗАТЕЛЬНО: следите за давлением в камерах. Прям очень советую купить электронный насос от Xiaomi,
+                    и раз в неделю подкачивайте. С завода самокат приезжает с сильно недокачанными
+                  </p>
                 </div>
               </div>
             </div>
           </div>
           <div class="feedback__nav">
-            <button class="feedback__button">Оставить отзыв</button>
+            <a class="feedback__button" href="#">Оставить отзыв</a>
             <div class="feedback__button-swiper">
-              <button class="feedback__pref">
-                <svg width="7.000000" height="13.999512" viewBox="0 0 7 13.9995" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <defs/>
-                  <path id="Mask" d="M5.82 13.99C5.53 13.99 5.24 13.87 5.04 13.62L0.22 7.62C-0.08 7.25 -0.08 6.72 0.23 6.35L5.23 0.35C5.58 -0.07 6.21 -0.13 6.64 0.23C7.06 0.58 7.12 1.21 6.76 1.63L2.29 7.01L6.6 12.37C6.95 12.8 6.88 13.43 6.45 13.77C6.27 13.92 6.04 13.99 5.82 13.99Z" fill="#151515" fill-opacity="1.000000" fill-rule="evenodd"/>
+              <button class="feedback__pref" id="prev">
+                <svg width="7.000000" height="13.999512" viewBox="0 0 7 13.9995" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs />
+                  <path id="Mask"
+                    d="M5.82 13.99C5.53 13.99 5.24 13.87 5.04 13.62L0.22 7.62C-0.08 7.25 -0.08 6.72 0.23 6.35L5.23 0.35C5.58 -0.07 6.21 -0.13 6.64 0.23C7.06 0.58 7.12 1.21 6.76 1.63L2.29 7.01L6.6 12.37C6.95 12.8 6.88 13.43 6.45 13.77C6.27 13.92 6.04 13.99 5.82 13.99Z"
+                    fill="#151515" fill-opacity="1.000000" fill-rule="evenodd" />
                 </svg>
               </button>
-              <button class="feedback__next">
-                <svg width="7.000000" height="13.999512" viewBox="0 0 7 13.9995" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <defs/>
-                  <path id="Mask" d="M1.17 13.99C1.46 13.99 1.75 13.87 1.95 13.62L6.77 7.62C7.07 7.25 7.07 6.72 6.76 6.35L1.76 0.35C1.41 -0.07 0.78 -0.13 0.35 0.23C-0.07 0.58 -0.13 1.21 0.23 1.63L4.7 7.01L0.39 12.37C0.04 12.8 0.11 13.43 0.54 13.77C0.72 13.92 0.95 13.99 1.17 13.99Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+              <button class="feedback__next" id="next">
+                <svg width="7.000000" height="13.999512" viewBox="0 0 7 13.9995" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs />
+                  <path id="Mask"
+                    d="M1.17 13.99C1.46 13.99 1.75 13.87 1.95 13.62L6.77 7.62C7.07 7.25 7.07 6.72 6.76 6.35L1.76 0.35C1.41 -0.07 0.78 -0.13 0.35 0.23C-0.07 0.58 -0.13 1.21 0.23 1.63L4.7 7.01L0.39 12.37C0.04 12.8 0.11 13.43 0.54 13.77C0.72 13.92 0.95 13.99 1.17 13.99Z"
+                    fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd" />
                 </svg>
               </button>
             </div>
           </div>
         </div>
       </section>
-      <section class="faq">
+      <section class="faq" id="faq">
         <div class="container">
           <div class="faq__ellipse1">
             <img src="img/decor/faq__ellipse1.png" alt="">
@@ -369,25 +442,28 @@
                 <p>Все ваши часто задаваемые вопросы о электросамокате Mi Scooter Pro 2.
                 </p>
                 <p>
-                Если у вас есть собственный вопрос - задайте его через форму обратной связи.</p>
+                  Если у вас есть собственный вопрос - задайте его через форму обратной связи.</p>
               </div>
-              <button class="faq__form-button">Задать вопрос</button>
+              <a class="faq__form-button" href="#">Задать вопрос</a>
             </div>
             <div class="faq__example">
               <div class="faq__example-elements">
                 <h4 class="faq__example-title">На него нужны права категории M?</h4>
                 <div class="faq__example-line"></div>
-                <p class="faq__example-text">Продуманный угол рассеивания света позволяет сохранять хорошую видимость, не ослепляя  других участников движения.</p>
+                <p class="faq__example-text">Продуманный угол рассеивания света позволяет сохранять хорошую видимость,
+                  не ослепляя  других участников движения.</p>
               </div>
               <div class="faq__example-elements">
                 <h4 class="faq__example-title">У меня вес 135 кг, выдержит ли этот самокат?</h4>
                 <div class="faq__example-line"></div>
-                <p class="faq__example-text">Самокат определенно выдержит и будет ехать, но не с максимальной скоростью.</p>
+                <p class="faq__example-text">Самокат определенно выдержит и будет ехать, но не с максимальной скоростью.
+                </p>
               </div>
               <div class="faq__example-elements">
                 <h4 class="faq__example-title">Есть ли влагозащита?</h4>
                 <div class="faq__example-line"></div>
-                <p class="faq__example-text">Электросамокат имеет степень защиты IP54. Он защищен от попадания пыли и брызг, падающих  в любом направлении. Погружение в воду может привести к поломке. </p>
+                <p class="faq__example-text">Электросамокат имеет степень защиты IP54. Он защищен от попадания пыли и
+                  брызг, падающих  в любом направлении. Погружение в воду может привести к поломке. </p>
               </div>
               <div class="faq__example-elements">
                 <h4 class="faq__example-title">Это версия для Китая или Европы?</h4>
@@ -406,7 +482,7 @@
           <div class="price__bg">
             <div class="price__inner">
               <div class="price__buy">
-                <h3 class="price__title">Mi Electric Scooter Pro 2</h3>
+                <h3 class="price__title">Mi Electric Scooter <br> Pro 2</h3>
                 <h4 class="price__price">54 990 ₽</h4>
                 <div class="price__section-button">
                   <button class="price__section-button-white">
@@ -416,23 +492,23 @@
                     Черный
                   </button>
                 </div>
-                <button class="price__button">Купить</button>
+                <a class="price__button" href="#">Купить</a>
               </div>
               <div class="price__set">
                 <h4 class="price__set-title">Комплект поставки </h4>
-                  <ul class="price__set-list">
-                    <li class="price__set-item">Адаптер питания</li>
-                    <li class="price__set-item">Шестигранный ключ</li>
-                    <li class="price__set-item">Удлинитель для насоса</li>
-                    <li class="price__set-item">Винты x 5 шт.</li>
-                    <li class="price__set-item">Запасная шина</li>
-                    <li class="price__set-item">Руководство пользователя</li>
-                    <li class="price__set-item">Буклет с информацией</li>
-                  </ul>
+                <div class="price__set-list">
+                  <p class="price__set-item">Адаптер питания</p>
+                  <p class="price__set-item">Шестигранный ключ</p>
+                  <p class="price__set-item">Удлинитель для насоса</p>
+                  <p class="price__set-item">Винты x 5 шт.</p>
+                  <p class="price__set-item">Запасная шина</p>
+                  <p class="price__set-item">Руководство пользователя</p>
+                  <p class="price__set-item">Буклет с информацией</p>
+                </div>
               </div>
             </div>
             <div class="price__img">
-              <img src="img/scooter/scooter-white.png" alt="">
+              <img src="img/scooter/scooter-white.png" alt="" id="littleBikeDown">
             </div>
           </div>
         </div>
