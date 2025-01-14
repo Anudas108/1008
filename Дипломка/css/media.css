@@ -57,8 +57,22 @@
     padding-top: 40px;
     margin-bottom: 270px;
   }
+  /* -------------- */
+
+  .appearance__text-text br {
+    display: none;
+  }
+  .appearance__element-one {
+    background-position: left 20% top;
+  }
+  .appearance__element-two {
+    background-position: right 0% top;
+  }
 
   /* ------------ */
+  .security__line1 {
+    top: 665px;
+  }
   .security__inner {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 220px 520px;
@@ -92,11 +106,13 @@
     padding-top: 40px;
     margin-bottom: 230px;
   }
+
   /* ------------ */
   .price__inner {
     justify-content: space-between;
     gap: 26%;
   }
+
   .price__img img {
     left: 310px;
   }
@@ -114,8 +130,19 @@
   .about__hover-three .about__hover-title {
     margin-bottom: 26px;
   }
+  /* ------------- */
+  .appearance__text-title {
+    margin: 367px 30px 15px 30px;
+  }
+  .appearance__text-text {
+    margin: 0 30px 30px;
+  }
 
   /* ------------- */
+  .security__line1 {
+    top: 625px;
+    left: 730px;
+  }
   .security__inner {
     grid-template-rows: 185px 500px;
     gap: 25px;
@@ -136,11 +163,13 @@
   .security__socials {
     margin-bottom: 10px;
   }
+
   /* ---------- */
   .price__inner {
     justify-content: space-between;
     gap: 15%;
   }
+
   .price__img img {
     left: 260px;
   }
@@ -261,6 +290,7 @@
 
   .bg {
     height: 500px;
+    margin-bottom: 100px;
   }
 
   .bg__speed-logo {
@@ -275,10 +305,27 @@
   .appearance__line2 {
     display: none;
   }
+  .appearance__inner {
+    margin-bottom: 100px;
+  }
+  .appearance__text-title {
+    margin-top: 280px;
+  }
+  .appearance__element-one {
+    background-position: left 20% top -100%;
+  }
+  .appearance__element-two {
+    background-position: right 15% top 55%;
+  }
 
   /* ------------ */
   .security__ellipse3 {
     top: 2550px;
+  }
+  .security__line1 {
+    top: 2545px;
+    left: 635px;
+    z-index: -1;
   }
 
   .security__title {
@@ -391,36 +438,39 @@
     width: 100%;
   }
 
-  .appearance__text-text {
-    display: none;
-  }
-
   /* ---------- */
   .bgXiaomi {
     background-position: right 40% center;
     margin-bottom: 100px;
   }
+
   /* -------------- */
   .feedback__title {
     font-size: 35px;
   }
+
   .feedback__nav {
     padding-right: 0;
   }
+
   /* ---------- */
   .price__inner {
     flex-direction: column;
     justify-content: start;
   }
+
   .price__section-button {
     margin-bottom: 150px;
   }
+
   .price__button {
     margin-bottom: 20px;
   }
+
   .price__set-list {
     display: none;
   }
+
   .price__set-title {
     margin-bottom: 0;
     font-size: 16px;
@@ -429,47 +479,15 @@
 
 @media (max-width: 900px) {
 
-  .header__top-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .nav {
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  .nav.burger-active {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: fixed;
-    opacity: 1;
-    visibility: visible;
-    background: var(--white);
-    width: 100vw;
-    height: 100vh;
-    z-index: 5;
-    transition: all .3s;
-  }
-
-  .nav.burger-active a {
-    color: var(--black-text);
-  }
-
   .header__top-burger {
-    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 3px;
-    position: relative;
-    top: 47px;
+    position: absolute;
+    top: 35px;
+    right: 55px;
     width: 54px;
     height: 54px;
     flex-shrink: 0;
@@ -479,8 +497,89 @@
     transition: all .3s;
   }
 
-  .nav__list ul {
+  .header__top-button {
+    display: flex;
+    align-items: center;
+    max-width: 122px;
+    max-height: 54px;
+    padding: 15px 35px;
+    border-radius: 65px;
+    font-size: 16px;
+    font-weight: 700;
+    background: var(--orange-text);
+    color: var(--white);
+    transition: all 0.4s;
+    margin-bottom: 30px;
+}
+
+  .header__top-button:hover {
+    background: var(--white);
+    color: var(--black-text);
+  }
+
+  .nav.burger-active {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+    background: var(--bg-dark);
     flex-direction: column;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    margin-left: -140px;
+  }
+
+  .nav {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  }
+
+  .nav.burger-active .nav__list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+    gap: 25px;
+    margin-top: 65px;
+  }
+
+
+
+  .nav__link {
+    color: var(--white);
+  }
+
+  .nav__item a {
+    font-size: 22px;
+  }
+
+  .header__top-burger.active .header__top-burger-line:nth-child(2) {
+    opacity: 0;
+  }
+.header__top-burger.active .header__top-burger-line:first-child {
+    transform: translateY(5px) rotate(45deg);
+}
+ .header__top-burger.active .header__top-burger-line:last-child {
+    transform: translateY(-5px) rotate(-45deg);
+}
+
+  .header__img img {
+    width: 160%;
+    left: 10%;
+    top: -27%;
+  }
+  /* ---------------- */
+
+  .header__section {
+    padding-bottom: 200px;
   }
 
   /* --------------------- */
@@ -488,6 +587,27 @@
   .appearance__title {
     font-size: 4vw;
     margin-bottom: 40px;
+  }
+  .appearance__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    margin-bottom: 60px;
+    overflow: hidden;
+  }
+
+
+  .appearance__element-one:hover,
+  .appearance__element-two:hover {
+    transform: scale(1);
+  }
+
+  .appearance__element-one {
+    background-position: left 20% top -15%;
+  }
+  .appearance__text-title {
+    margin-top: 350px;
   }
 
   /* --------------- */
@@ -498,18 +618,22 @@
   .security__inner-two {
     padding-top: 60px;
   }
+
   /* -------------- */
   .price__title {
     font-size: 35px;
     margin-bottom: 5px;
   }
+
   .price__price {
     font-size: 25px;
   }
+
   .price__img img {
     left: 150px;
     top: -137px
   }
+
   .price__img img {
     z-index: -1;
   }
@@ -527,13 +651,13 @@
   }
 
   .header__section {
-    padding-bottom: 150px;
+    padding-bottom: 130px;
   }
 
   .header__img img {
     width: 165%;
     left: 8%;
-    top: -26%;
+    top: -30%;
   }
 
   /* ----------------------- */
@@ -595,38 +719,48 @@
   .bgXiaomi-bg img {
     height: 500px;
   }
+
   /* ----------- */
   .faq__ellipse1 {
     left: -285px;
     top: -450px;
   }
+
   .faq__inner {
     flex-direction: column;
     gap: 50px;
     margin-bottom: 100px;
   }
+
   .faq__form {
     max-width: 100%;
   }
+
   .faq__form-title br {
     display: none;
   }
+
   .faq__form-title {
     font-size: 35px;
   }
+
   .faq__form-text {
     max-width: 450px;
   }
+
   .faq__form-text p:last-child {
     margin-bottom: 30px;
   }
+
   /* -------- */
   .price__line1 {
     display: none;
   }
+
   .price__inner {
     padding: 40px;
   }
+
   .price__img img {
     top: -157px
   }
@@ -644,7 +778,7 @@
   .header__img img {
     width: 185%;
     left: 8%;
-    top: -29%;
+    top: -33%;
   }
 
   /* ------------ */
@@ -655,6 +789,10 @@
   /* ----------- */
   .security__ellipse3 {
     top: 1750px;
+  }
+
+  .security__line1 {
+    display: none;
   }
 
   .security__title {
@@ -686,6 +824,7 @@
   .bgXiaomi {
     background-position: right 35% center;
   }
+
   /* ---------- */
   .price__img img {
     max-width: 850px;
@@ -719,7 +858,8 @@
   .header__top-burger {
     width: 40px;
     height: 40px;
-    top: 30px;
+    top: 25px;
+    right: 40px;
   }
 
   .header__img img {
@@ -773,59 +913,73 @@
   .bgXiaomi__about-text {
     max-width: 280px;
   }
+
   /* ---------- */
   .feedback__ellipse1 {
     left: -100px;
   }
+
   .feedback__title {
     font-size: 30px;
   }
+
   /* ---------- */
   .faq__form-title {
     font-size: 25px;
     margin-bottom: 25px;
   }
+
   .faq__inner {
     margin-bottom: 60px;
   }
+
   /* ----------- */
   .price__inner {
     padding: 30px;
   }
+
   .price__buy {
     max-width: 100%;
   }
+
   .price__title br {
-  display: block;
+    display: block;
   }
+
   .price__section-button {
     margin: 0 auto 111%;
   }
+
   .price__button {
     margin: 0 auto 20px;
     max-width: 100%;
   }
+
   .price__set {
     padding-right: 0;
     margin: 0 auto;
   }
+
   .price__img img {
     max-width: 670px;
     width: 133%;
     top: 240px;
     left: -70px;
   }
+
   /* ----------- */
   .footer__inner {
     flex-direction: column;
     justify-content: center;
   }
+
   .footer__copy {
     padding-top: 40px;
     padding-bottom: 3px;
     text-align: center;
     line-height: 2;
   }
+
   .footer__info {
     padding-top: 3px;
     padding-bottom: 40px;
@@ -854,7 +1008,7 @@
   .header__img img {
     width: 230%;
     left: -27%;
-    top: -47%;
+    top: -50%;
   }
 
   .header__section-title {
@@ -897,6 +1051,7 @@
 
   .bg {
     background-position: 60% center;
+    margin-bottom: 60px;
   }
 
   .bg__speed-logo {
@@ -923,69 +1078,153 @@
     font-size: 20px;
     margin-bottom: 30px;
   }
+  .appearance__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 390px 140px 390px 140px;
+    grid-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  .appearance__element-one {
+    background-position: left 20% top 100%;
+    height: 100%;
+    height: 100%;
+  }
+  .appearance__element-two {
+    grid-area: 3 / 1 / 4 / 1;
+    background-position: right 35% top 55%;
+    height: 100%;
+    height: 100%;
+  }
+  .appearance__text {
+    opacity: 0;
+  }
+  .appearance__text2 {
+    display: block;
+    grid-area: 2 / 1 / 3 / 1;
+  }
+  .appearance__text-title2 {
+    color: var(--white);
+  font-family: "Gilroy";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: left;
+  margin-bottom: 10px;
+  }
+  .appearance__text-text2 {
+    color: var(--white);
+    font-family: "Gilroy";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+  }
+  .appearance__text3 {
+    display: block;
+    grid-area: 4 / 1 / 5 / 1;
+  }
+  .appearance__text-title3 {
+    color: var(--white);
+  font-family: "Gilroy";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: left;
+  margin-bottom: 10px;
+  }
+  .appearance__text-text3 {
+    color: var(--white);
+    font-family: "Gilroy";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+  }
 
   /* -------------------- */
   .security__ellipse3 {
     top: 1500px;
   }
+
   /* ------------ */
   .bgXiaomi {
     height: 420px;
     background-position: right 30% center;
   }
+
   .bgXiaomi-bg img {
     height: 420px;
   }
+
   .bgXiaomi__about-logo {
     margin-bottom: 120px;
   }
+
   /* ----------- */
   .feedback__title {
     font-size: 26px;
   }
+
   .feedback__slide-content {
     max-width: 330px;
     padding: 30px;
   }
+
   .feedback__slide-title {
     font-size: 18px;
   }
+
   .feedback__button {
     padding: 12px 32px;
   }
+
   .feedback__pref {
     width: 50px;
     height: 50px;
   }
+
   .feedback__next {
     width: 50px;
     height: 50px;
   }
+
   /* -------- */
   .faq__form-button {
     padding: 12px 35px;
   }
+
   /* -------- */
   .price__title {
     font-size: 30px;
   }
+
   .price__price {
     margin-bottom: 20px;
   }
+
   .price__section-button {
     max-height: 45px;
     max-width: 230px;
   }
+
   .price__section-button-white {
     padding: 10px 30px;
   }
+
   .price__section-button-black {
     padding: 10px 30px;
   }
+
   .price__button {
     padding: 10px 35px;
     margin-bottom: 10px;
   }
+
   .price__img img {
     top: 200px;
   }
@@ -993,12 +1232,14 @@
 
 @media (max-width: 450px) {
   .header__img img {
-    top: -38%;
+    top: -40%;
   }
+
   /* ------- */
   .price__section-button {
     margin-bottom: 116%;
   }
+
   .price__img img {
     left: -54px;
   }
@@ -1018,9 +1259,12 @@
     margin-bottom: 150px;
   }
 
+  .header__top-burger {
+    right: 32px;
+  }
+
   .header__img img {
     width: 230%;
-    top: -40%;
   }
 
   /* ---------------------- */
@@ -1028,6 +1272,23 @@
   .about__title {
     max-width: 200px;
     font-size: 5vw;
+  }
+  /* ---------- */
+
+  .appearance__inner {
+    grid-template-rows: 350px 110px 350px 120px;
+  }
+  .appearance__element-one {
+    background-position: left 20% top 55%;
+  }
+
+  .appearance__text-title2,
+  .appearance__text-title3 {
+    font-size: 16px;
+  }
+  .appearance__text-text2,
+  .appearance__text-text3 {
+    font-size: 12px;
   }
 
   /* ---------- */
@@ -1055,92 +1316,118 @@
   .security__inner-two-text {
     font-size: 12px;
   }
+
   /* -------------- */
   .bgXiaomi__about-logo {
     margin-bottom: 150px;
   }
+
   .bgXiaomi__about-title {
     margin-bottom: 20px;
   }
+
   .bgXiaomi__about-text {
     font-size: 12px;
     max-width: 240px;
   }
+
   /* ----------- */
   .feedback__ellipse1 {
     top: -660px;
   }
+
   .feedback__title {
     font-size: 20px;
   }
+
   .feedback__slide-content {
     max-width: 300px;
   }
+
   .feedback__slide-title {
     font-size: 16px;
   }
+
   .feedback__slide-text {
     font-size: 12px;
   }
+
   .feedback__nav {
     flex-direction: column-reverse;
     margin-bottom: 60px;
   }
+
   .feedback__pref {
     width: 40px;
     height: 40px;
   }
+
   .feedback__next {
     width: 40px;
     height: 40px;
   }
+
   .feedback__button-swiper {
     margin-bottom: 30px;
   }
+
   .feedback__button {
     width: 100%;
     text-align: center;
   }
+
   /* --------- */
   .faq__form-title {
     font-size: 20px;
   }
+
   .faq__form-button {
     max-width: 100%;
   }
+
   .faq__example-elements {
     margin-bottom: 30px;
   }
+
   .faq__example-title {
     font-size: 16px;
   }
+
   .faq__example-text {
     font-size: 12px;
   }
+
   /* -------- */
   .price__title {
     font-size: 25px;
   }
+
   .price__price {
     font-size: 20px;
   }
+
   .price__section-button {
     max-width: 200px;
   }
+
   .price__section-button-white {
     font-size: 14px;
     padding: 12px 26px;
   }
+
   .price__section-button-black {
     font-size: 14px;
     padding: 12px 26px;
   }
+
   .price__button {
     font-size: 14px;
   }
+
   .price__set-title {
     font-size: 14px;
   }
+
   .price__img img {
     top: 180px;
     left: -50px;
@@ -1149,7 +1436,7 @@
 
 @media (max-width: 370px) {
   .header__img img {
-    top: -34%;
+    top: -35%;
   }
 
   /* ------------ */
@@ -1157,19 +1444,23 @@
   .appearance__title {
     font-size: 20px;
   }
+
   /* ---------- */
 
   .feedback__slide-content {
     max-width: 250px;
   }
+
   /* ------- */
   .price__section-button {
     margin-bottom: 120%;
   }
+
   /* ------- */
   .footer__copy {
     font-size: 12px;
   }
+
   .footer__info {
     font-size: 12px;
   }
@@ -1177,7 +1468,7 @@
 
 @media (max-width: 350px) {
   .header__img img {
-    top: -30%;
+    top: -31%;
   }
 
   /* ------------- */
@@ -1189,13 +1480,16 @@
   .security__inner-title {
     font-size: 14px;
   }
+
   /* ------------ */
   .price__title {
     font-size: 20px;
   }
+
   .price__section-button {
     margin-bottom: 123%;
   }
+
   .price__img img {
     top: 170px;
     left: -44px;
@@ -1208,18 +1502,22 @@
   }
 
   .header__img img {
-    top: -30%;
+    top: -32%;
   }
+
   /* ------- */
   .price__section-button {
     margin-bottom: 128%;
   }
+
   .price__section-button-white {
     padding: 12px 23px;
   }
+
   .price__section-button-black {
     padding: 12px 23px;
   }
+
   .price__img img {
     left: -40px;
   }

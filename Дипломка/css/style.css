@@ -192,6 +192,23 @@ header li {
   color: var(--orange-text)
 }
 
+.dark-theme .appearance__text-title2,
+.dark-theme .appearance__text-title3 {
+  color: var(--black-text);
+}
+.light-theme .appearance__text-title2,
+.light-theme .appearance__text-title3 {
+  color: var(--white);
+}
+.dark-theme .appearance__text-text2,
+.dark-theme .appearance__text-text3 {
+  color: var(--black-text);
+}
+.light-theme .appearance__text-text2,
+.light-theme .appearance__text-text3 {
+  color: var(--white);
+}
+
 /* ---------------------------------переключение темы section security  */
 
 .security-list {
@@ -537,10 +554,12 @@ header li {
   z-index: -1;
 }
 
-.header__top {}
+.header__top {
+
+}
 
 .header__top-inner {
-  position: relative;
+  /* position: relative; */
 }
 
 .header__top-logo {
@@ -561,6 +580,7 @@ header li {
   justify-content: space-between;
   text-align: center;
   padding-left: 140px;
+  transition: all .3s;
 
 }
 
@@ -623,18 +643,6 @@ header li {
   width: 18px;
   height: 2px;
   background: var(--black-text);
-}
-
-.burger-active {
-  position: fixed;
-  inset: 0;
-  z-index: 10;
-  background: var(--white);
-  padding: 26vh 15px 30px;
-  font-size: 24px;
-  opacity: 1;
-  visibility: visible;
-  transition: opacity .3s ease, visibility .3s ease;
 }
 
 /* --------------------header__section */
@@ -943,6 +951,7 @@ header li {
 .appearance__element-two {
   border-radius: 15px;
   position: relative;
+  overflow: hidden;
 }
 
 .appearance__element-one-gradient1 img {
@@ -964,7 +973,9 @@ header li {
 .appearance__element-one {
   max-width: 560px;
   max-height: 550px;
-  background: url('../img/scooter/element-one.png');
+  width: 101%;
+  height: auto;
+  background: url('../img/scooter/element-one.png') no-repeat;
   transform: scale(1);
   transition: all .3s;
 }
@@ -979,7 +990,7 @@ header li {
   z-index: 2;
 }
 
-.appearance__text {}
+
 
 .appearance__text-title {
   color: var(--white);
@@ -1007,6 +1018,8 @@ header li {
   background: #151515;
   max-width: 560px;
   max-height: 550px;
+  width: 100%;
+  height: auto;
   background-image: url('../img/scooter/element-two.png');
   transform: scale(1);
   transition: all .3s;
@@ -1015,6 +1028,13 @@ header li {
 .appearance__element-two:hover {
   transform: scale(1.12);
   z-index: 2;
+}
+
+.appearance__text2 {
+  display: none;
+}
+.appearance__text3 {
+  display: none;
 }
 
 /* ----------------------------------section-security */

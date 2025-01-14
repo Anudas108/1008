@@ -21,11 +21,11 @@ themeToggleButton.addEventListener('click', () => {
               };
           }, 300);
       }
-      changeImage(headerScooter, '../img/scooter/scooter-white.png');
-      changeImage(App, '../img/logo/app-store-white.svg');
-      changeImage(Google, '../img/logo/google-white.svg');
-      changeImage(telefhoneColor, '../img/scooter/security__telefhone1.png');
-      changeImage(littleBikeDown, '../img/scooter/scooter-white.png');
+      changeImage(headerScooter, 'img/scooter/scooter-white.png');
+      changeImage(App, 'img/logo/app-store-white.svg');
+      changeImage(Google, 'img/logo/google-white.svg');
+      changeImage(telefhoneColor, 'img/scooter/security__telefhone1.png');
+      changeImage(littleBikeDown, 'img/scooter/scooter-white.png');
   }
 });
 
@@ -117,11 +117,11 @@ themeToggleButton2.addEventListener('click', () => {
               };
           }, 300);
       }
-      changeImage(headerScooter, '../img/scooter/scooter-black.png');
-      changeImage(App, '../img/logo/app-store-black.svg');
-      changeImage(Google, '../img/logo/google-black.svg');
-      changeImage(telefhoneColor, '../img/scooter/security__telefhone-white.png');
-      changeImage(littleBikeDown, '../img/scooter/scooter-black.png');
+      changeImage(headerScooter, 'img/scooter/scooter-black.png');
+      changeImage(App, 'img/logo/app-store-black.svg');
+      changeImage(Google, 'img/logo/google-black.svg');
+      changeImage(telefhoneColor, 'img/scooter/security__telefhone-white.png');
+      changeImage(littleBikeDown, 'img/scooter/scooter-black.png');
   }
 });
 
@@ -141,11 +141,11 @@ themeToggleButton3.addEventListener('click', () => {
               };
           }, 300);
       }
-      changeImage(headerScooter, '../img/scooter/scooter-white.png');
-      changeImage(App, '../img/logo/app-store-white.svg');
-      changeImage(Google, '../img/logo/google-white.svg');
-      changeImage(telefhoneColor, '../img/scooter/security__telefhone1.png');
-      changeImage(littleBikeDown, '../img/scooter/scooter-white.png');
+      changeImage(headerScooter, 'img/scooter/scooter-white.png');
+      changeImage(App, 'img/logo/app-store-white.svg');
+      changeImage(Google, 'img/logo/google-white.svg');
+      changeImage(telefhoneColor, 'img/scooter/security__telefhone1.png');
+      changeImage(littleBikeDown, 'img/scooter/scooter-white.png');
   }
 });
 
@@ -201,11 +201,11 @@ themeToggleButton4.addEventListener('click', () => {
               };
           }, 300);
       }
-      changeImage(headerScooter, '../img/scooter/scooter-black.png');
-      changeImage(App, '../img/logo/app-store-black.svg');
-      changeImage(Google, '../img/logo/google-black.svg');
-      changeImage(telefhoneColor, '../img/scooter/security__telefhone-white.png');
-      changeImage(littleBikeDown, '../img/scooter/scooter-black.png');
+      changeImage(headerScooter, 'img/scooter/scooter-black.png');
+      changeImage(App, 'img/logo/app-store-black.svg');
+      changeImage(Google, 'img/logo/google-black.svg');
+      changeImage(telefhoneColor, 'img/scooter/security__telefhone-white.png');
+      changeImage(littleBikeDown, 'img/scooter/scooter-black.png');
   }
 });
 
@@ -248,12 +248,31 @@ themeToggleButton4.addEventListener('click', () => {
 // ---------------------------------------бургер меню
 
 const burgerMenu = document.querySelector('.header__top-burger');
-const nav = document.querySelector('nav');
+const nav = document.querySelector('.nav');
 const body = document.body;
+const navLinks = document.querySelectorAll('.nav__link');
 
 burgerMenu.addEventListener('click', () => {
     nav.classList.toggle('burger-active');
+    burgerMenu.classList.toggle('active');
     body.classList.toggle('noScroll');
+});
+
+navLinks.forEach(link => {  // Обрабатываем клик по каждой ссылке
+  link.addEventListener('click', (event) => {
+      event.preventDefault(); // Отменяем стандартное поведение ссылки (переход по якорю)
+
+      const targetId = link.getAttribute('href'); // Получаем ID секции из атрибута href ссылки
+      console.log(targetId);
+       nav.classList.remove('burger-active'); // Закрываем меню
+      burgerMenu.classList.remove('active');
+      body.classList.remove('noScroll');
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+         targetElement.scrollIntoView({ behavior: 'smooth' }); // Плавно прокручиваем страницу к секции
+      }
+  });
 });
 
 // ------------------------------------интерактивный список номер один
